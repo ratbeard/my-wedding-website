@@ -10,17 +10,21 @@ $link-visited-color: $link-color
 
 $blueprint-font-family:  'Century Gothic', 'Apple Gothic', 'Helvetica Neue', arial, sans-serif
 $blueprint-font-size:    13px
-$blueprint-grid-columns: 12
+$blueprint-grid-columns: 6
 $blueprint-grid-width:   60px
 $blueprint-grid-margin:  20px
 
 +global-reset
-
 +blueprint-typography
 
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
 
+body
+  +blueprint(true)
+  +grid-background
+  
+  
 #main
   padding: 50px
   text-align: center
