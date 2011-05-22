@@ -1,19 +1,25 @@
 !!! 5
 %html{ :lang => "en" }
   %head
-    %meta{ :charset => "utf-8" }    
-
-    / Comment in layout
-
+    %meta{ :charset => "utf-8" }
+    %title Mike &amp; Carolyn
     = stylesheet_link_tag "site.css"
-
-    :javascript
-      // Comment in javascript
-
     = yield_content :head
     
   %body{ :class => page_classes }
-
-    = render :header
-    #main{ :role => "main" }
-      = yield
+    #container
+      %header
+        = image_tag "us.jpg"
+        .content
+          %h1= "Mike & Carolyn"
+          
+      #main{ :role => "main" }
+        
+      = render :places
+      = render :people
+      = render :registered
+              
+        
+        
+    %script{ :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" }
+    %script{ :src => "javascripts/app.js" }
