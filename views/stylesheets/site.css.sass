@@ -19,71 +19,92 @@ $blueprint-grid-margin:  20px
 
 body
   +blueprint(true)
-
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
 
-ul
+body ul
   +no-bullets
+  padding: 0
+  margin: 0
+  
+body li
+  padding: 0
+  margin: 0
+  
+ul.links
+  +horizontal-list
+  li 
+    padding: 0
+    margin: 0
 
 #container
   +container
   // +grid-background($blueprint-grid-columns, $blueprint-grid-width, $blueprint-grid-margin)
-    
-#main
-  // padding: 50px
-  // text-align: center
-  
+
 header
-  +column(24)
-  
+  +column(24, true)  
   img
     width: 950px
-    margin-top: -420px
+    margin-top: -424px
 
-ul.links
-  +horizontal-list
+section
+  padding-bottom: 40px
 
-
+  .content 
+    padding-top: 1.5em
+    li
+      display: none
+      &.active
+        display: block
+  
+// ==  Places ==
 section.places
   +column(7)
-  border: 1px dashed gray
+  // border: 1px dashed gray
+  height: 500px
+  
+  .links li
+    padding: 10px
+    border: 1px solid black
+    font-size: 115%
+    a
+      text-decoration: none
+      color: black
 
+    &.active
+      background: black
+      a
+        color: white
+
+      
+// == People ==
 section.people
   +column(5, true)
-  border: 1px dashed gray
+  // border: 1px dashed gray
+  height: 400px
+  
+  .links li
+    +column(1)
+    width: 60px
+  .links li.last
+    +column(1, true)
     
+    
+// == Registered ==
 section.registered
   clear: both
   
   img
     width: $blueprint-grid-width
     margin-right: $blueprint-grid-margin
+
+  .crate
+    position: relative
+    top: 25px
+  .macys
+    position: relative
+    top: 3px
+  
     
+  
     
-    
-// 
-// img
-//   float: left
-//   margin-right: 3em
-//   
-// ul,ol
-//   list-style-type: none
-// 
-// nav li
-//   float: left
-//   border: 1px solid black
-//   margin: 0 20px
-//   padding: .5em .9em
-//   
-// body
-//   // background: #E3D8CD
-// 
-// header
-//   width: 1024px
-//   margin: 40px auto
-//   
-// header a
-//   color: black
-//   text-decoration: none
-//   

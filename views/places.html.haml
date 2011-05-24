@@ -1,35 +1,36 @@
 %section.places
+  / %h2 Places
   %ul.links
+    %li.active
+      %a{:href => '#ceremony'} Ceremony
     %li 
-      %a Ceremony
+      %a{:href => '#reception'} Reception
     %li 
-      %a Reception
+      %a{:href => '#rehearsal'} Rehearsal Dinner
     %li 
-      %a Rehearsal Dinner
-    %li 
-      %a Accommodations
+      %a{:href => '#accommodations'} Accommodations
       
   %ul.content
-    %li
-      %h3 Ceremony
+    %li#ceremony.active
       %p
-        The ceremony will take place at the church
-        blah blah
-        insert image of church
-        insert link to directions
+        The ceremony will take place at <strong>Lake of the Isles Lutheran Church</strong>
+        = image_tag 'church.jpeg'
+        
+        %a.address{:target => 'blank', :href => "http://maps.google.com/maps?hl=en&ie=UTF8&q=like+of+the+isles+lutheran&fb=1&gl=us&hq=like+of+the+isles+lutheran&hnear=0x52b333909377bbbd:0x939fc9842f7aee07,Minneapolis,+MN&cid=0,0,11548173723552627775&ll=44.962126,-93.305147&spn=0.008761,0.01929&z=16"}
+          2020 West Lake of the Isles Parkway, Minneapolis, MN
 
-    %li
-      %h3 Reception
+    %li#reception
       %p
         The reception will take place at <b>calhoun beach club</b>
-
-    %li
-      %h3 Rehearsal Dinner
+        = image_tag 'calhoun.jpeg'
+        
+    %li#rehearsal
       %p
-        The reception will take place at pinstripes
-
-    %li
-      %h3 Reception
+        The rehearsal dinner will take place at <a href="http://www.pinstripes.com/index.html">Pinstripes<a/>.
+        = image_tag 'pinstripes.jpeg'
+        
+    %li#accommodations
       %p
         Rooms have been reserved at the westin.
         Use this link to register.
+      = image_tag 'westin.jpeg'
