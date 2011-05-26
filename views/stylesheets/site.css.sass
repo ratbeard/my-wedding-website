@@ -118,9 +118,10 @@ section.people
     height: 90px
     margin-bottom: 1em
     +opacity(.5)
+    +transition(opacity, 750ms)
     &.last
       +column(1, true)
-    &.active
+    &.active, &:hover
       +opacity(1)
 
     
