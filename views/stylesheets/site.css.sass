@@ -22,6 +22,9 @@ body
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
 
+img
+  +box-shadow(1px 1px 5px #999)
+  
 body ul
   +no-bullets
   padding: 0
@@ -44,6 +47,7 @@ ul.links
 header
   +column(12, true)  
   position: relative
+  margin-bottom: 2em
   img
     width: 950px
     margin-top: -410px
@@ -53,14 +57,16 @@ header
     left: 1.5em
     bottom: 2.5em
     color: #111
+    +text-shadow(0px 2px 3px #555)
   time
     display: block
     position: absolute
-    bottom: 1em
+    bottom: .5em
     right: .5em
     font-size: 2.3em
     color: #111    
-
+    +text-shadow(0px 2px 3px #555)
+    
 section
   padding-bottom: 40px
 
@@ -76,11 +82,12 @@ section
 section.places
   +column(7)
   // border: 1px dashed gray
-  height: 500px
+  // height: 500px
   
   .links li
-    padding: 10px
-    border: 1px solid black
+    padding: 4px 10px
+    +border-radius(5px)
+    // border: 1px solid black
     font-size: 115%
     a
       text-decoration: none
@@ -103,27 +110,39 @@ section.places
 // == People ==
 section.people
   +column(5, true)
+  padding: 1px
   // border: 1px dashed gray
-  height: 400px
+
   
   .links li
     +column(1)
     width: 60px
-  .links li.last
-    +column(1, true)
+    height: 90px
+    margin-bottom: 1em
+      
+    &.last
+      +column(1, true)
+    &.active
+      outline: 1px solid red
+
+    
+  h3 em
+    color: #444
+    font-style: normal
     
     
 // == Registered ==
 section.registered
-  clear: both
+  +column(7)
   
   img
     width: $blueprint-grid-width
-    margin-right: $blueprint-grid-margin
+    margin-right: 6px
+    +box-shadow(none)
 
   .crate
     position: relative
-    top: 25px
+    top: 1px
   .macys
     position: relative
     top: 3px

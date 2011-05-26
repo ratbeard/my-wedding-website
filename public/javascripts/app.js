@@ -4,26 +4,24 @@ $(function () {
   
 
   function changeTab (e) {
+    var el, id, container, now, old
     e.preventDefault()
-    // var el, id, container, current, content
 
+    // Get reference to content to show
     el = $(e.currentTarget)
     id = el.find('a').attr('href')
     
-    // Update link
+    // Update link state
     el.siblings('.active').removeClass('active').end().addClass('active')
     
-    // Update Content
+    // Update Content visibility
     container = el.closest('section')
-    old = container.find('.content .active')
     now = container.find(id)
+    old = now.siblings(':visible')
     
-    old.fadeOut(function () { 
-      old.removeClass('active')
-      now.fadeIn(function () { now.addClass('active') })
+    old.fadeOut(function () {
+      now.fadeIn()
     })
-    
-    console.log(ee = el, old, now)
   }
   
 })
