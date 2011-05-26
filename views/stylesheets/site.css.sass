@@ -42,20 +42,35 @@ ul.links
   // +grid-background($blueprint-grid-columns, $blueprint-grid-width, $blueprint-grid-margin)
 
 header
-  +column(24, true)  
+  +column(12, true)  
+  position: relative
   img
     width: 950px
     margin-top: -424px
+    
+  h1
+    position: absolute
+    left: 1.5em
+    bottom: 2.5em
+    color: #111
+  time
+    display: block
+    position: absolute
+    bottom: 1em
+    right: .5em
+    font-size: 2.3em
+    color: #111    
 
 section
   padding-bottom: 40px
 
   .content 
-    padding-top: 1.5em
+    padding-top: 2em
     li
       display: none
       &.active
         display: block
+  
   
 // ==  Places ==
 section.places
@@ -76,7 +91,15 @@ section.places
       a
         color: white
 
-      
+  .content
+    a
+      color: black
+    img
+      width: span(6)
+      display: block
+      margin: 0 0 1.5em
+    
+    
 // == People ==
 section.people
   +column(5, true)
