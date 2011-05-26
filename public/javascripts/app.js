@@ -1,7 +1,6 @@
 $(function () {
 
   $('body').delegate('.links li', 'click', changeTab)
-  
 
   function changeTab (e) {
     var el, id, container, now, old
@@ -12,7 +11,7 @@ $(function () {
     id = el.find('a').attr('href')
     
     // Update link state
-    el.siblings('.active').removeClass('active').end().addClass('active')
+    el.siblings('.active').removeClass('active').end().addClass('active').trigger('activated')
     
     // Update Content visibility
     container = el.closest('section')
