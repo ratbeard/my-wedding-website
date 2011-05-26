@@ -47,7 +47,7 @@ ul.links
 header
   +column(12, true)  
   position: relative
-  margin-bottom: 2em
+  margin-bottom: 2.5em
   img
     width: 950px
     margin-top: -410px
@@ -81,6 +81,7 @@ section
 // ==  Places ==
 section.places
   +column(7)
+  margin-top: 6px
   // border: 1px dashed gray
   // height: 500px
   
@@ -119,11 +120,11 @@ section.people
     width: 60px
     height: 90px
     margin-bottom: 1em
-      
+    +opacity(.5)
     &.last
       +column(1, true)
     &.active
-      outline: 1px solid red
+      +opacity(1)
 
     
   h3 em
