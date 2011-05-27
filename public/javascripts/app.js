@@ -27,7 +27,7 @@ $(function () {
       var type, who
       type = el.closest('section').attr('class')
       who = el.find('a').attr('href').slice(1)
-      console.log('track', type, who)
+      // console.log('track', type, who)
       _gaq.push(['_trackEvent', type, who])
     }
   }
