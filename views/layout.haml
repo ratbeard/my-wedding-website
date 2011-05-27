@@ -31,10 +31,11 @@
         = image_tag "us.jpg", :width => 950, :height => 226, :alt => "Mike and Carolyn smooching in the slums"
         %h1 Mike & Carolyn
         %time 10/15/2011
-        
-      = render :places
-      = render :people
-      = render :registered      
+      .left-col
+        = render :places
+        = render :registered      
+      .right-col
+        = render :people
         
     %script{ :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" }
     %script{ :src => "javascripts/app.js" }

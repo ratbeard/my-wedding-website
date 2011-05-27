@@ -65,7 +65,7 @@ header
     +text-shadow(0px 2px 3px #555)
     
 section
-  padding-bottom: 40px
+  padding-bottom: 1em
 
   .content 
     padding-top: 2em
@@ -74,10 +74,14 @@ section
       &.active
         display: block
   
+
+.left-col
+  +column(7)
+.right-col
+  +column(5, true)
   
 // ==  Places ==
 section.places
-  +column(7)
   margin-top: 6px
   // border: 1px dashed gray
   // height: 500px
@@ -107,10 +111,7 @@ section.places
     
 // == People ==
 section.people
-  +column(5, true)
-  padding: 1px
   // border: 1px dashed gray
-
   
   .links li
     +column(1)
